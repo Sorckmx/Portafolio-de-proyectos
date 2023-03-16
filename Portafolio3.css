@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'work sans';
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*Posibilidad de deslizar cuando se haga click en los links del menú */
+    scroll-behavior: smooth;
+}
+
+    /* Menú */
+.contenedor-header {
+    background: #1e2320a7;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}    
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: rgb(125, 169, 231) ;
+    text-decoration: none;
+}
+
+.contenedor-header header ul {
+    display: flex;
+    list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: bisque;
+    margin: 0 15px;
+    padding: 3px;
+    transition: 1s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: rgb(219, 167, 221);
+}
+
+.nav-responsive {
+    background-color: aquamarine;
+    color: bisque;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+    /* Sección de Inicio*/
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), url(./imagenes/Línea\ de\ código.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+}    
+
+.inicio .contenido-banner {
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img {
+    margin-top: 40px;
+    border: 10px solid #1b171c;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+
+.inicio .contenido-banner h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .contenido-banner .redes a {
+    color: antiquewhite;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid antiquewhite;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: 1s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: rgb(202, 127, 255);
+}
