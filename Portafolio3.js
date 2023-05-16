@@ -45,10 +45,10 @@ window.onscroll = function(){
 
 
 //Creación de la funcionalidad para el apartado de contacto
-/*
+
 //Se definen las variables totales a utilizar en este JavaScript
 let txtName = document.getElementById("name");
-let txtEmail = document.getElementById("email");
+let txtEmail = document.getElementById("Email");
 let txtPhone = document.getElementById("phone");
 let txtSubject = document.getElementById("subject");
 let txtMessage = document.getElementById("message");
@@ -60,7 +60,7 @@ let msgError = "";
 //Listener acerca de los diferentes campos a rellenar en el formulario de contacto
 txtName.addEventListener("blur", function (event) {
     event.preventDefault();
-    txtNombre.value.trim();
+    txtName.value.trim();
 
     txtEmail.addEventListener("blur", function (event) {
         event.preventDefault();
@@ -69,7 +69,7 @@ txtName.addEventListener("blur", function (event) {
 
     txtPhone.addEventListener("blur", function (event) {
         event.preventDefault();
-        txtTelefono.value = txtTelefono.value.trim();
+        txtPhone.value = txtPhone.value.trim();
     });
 
     txtSubject.addEventListener("blur", function (event) {
@@ -79,7 +79,7 @@ txtName.addEventListener("blur", function (event) {
     
     txtMessage.addEventListener("blur", function (event) {
         event.preventDefault();
-        txtMensaje.value = txtMensaje.value.trim();
+        txtMessage.value = txtMessage.value.trim();
     });
 });
 
@@ -91,11 +91,11 @@ const regexSubject = (/^[\s\S]{5,100}$/);
 const regexMessage = (/^[\s\S]{5,150}$/);
 
 // función para validar los diferentes errores que existen en los campos del formulario y agregarlos a la variable msgError
-btnContacto.addEventListener("click", function (event) {
+btnSend.addEventListener("click", function (event) {
     event.preventDefault();
     let cont = 0;
 
-    if (validarname(txtName.value)) {
+    if (validarName(txtName.value)) {
 
 
     } else {
@@ -109,7 +109,7 @@ btnContacto.addEventListener("click", function (event) {
         cont += 1;
     }
 
-    if (validarTelefono(txtPhone.value)) {
+    if (validarPhone(txtPhone.value)) {
 
     } else {
         console.log(msgError);
@@ -175,7 +175,7 @@ function validarEmail(email) {
 
 
     } else {
-        msgError += "<li>Email No Válido</li>";
+        msgError += "<li>Email No Válido, no tiene el formato correcto</li>";
         return false;
     }
 }
@@ -185,7 +185,7 @@ function validarPhone(phone) {
 
 
     } else {
-        msgError += '<li> Teléfono No Válido </li>';
+        msgError += '<li> Teléfono No Válido, se necesitan 10 dígitos </li>';
         return false;
     }
 }
@@ -195,18 +195,18 @@ function validarMessage(message) {
 
 
     } else {
-        msgError += " <li> Mensaje No Válido </li>";
+        msgError += " <li> Mensaje No Válido, cumplir con el mínimo de 5 caracteres </li>";
         return false;
     }
 }
-function validarSucursal(subject) {
+function validarSubject(subject) {
     if (regexSubject.test (subject)) {
         return true;
 
 
     } else {
-        msgError += "<li> Escribe un asunto válido </li>";
+        msgError += "<li> Escribe un tema válido, mínimo 5 caracteres </li>";
         return false;
     }
 }
-*/
+
